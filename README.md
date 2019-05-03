@@ -14,6 +14,6 @@
 * '{' left parenthesis
 * '}' right parenthesis
 
-##Inpired by
+## Inpired by
 * [rosettacode/Compiler](https://rosettacode.org/wiki/Compiler)
 * [Parsing Expressions by Recursive Descent](https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm)

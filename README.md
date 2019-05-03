@@ -1,5 +1,5 @@
 # EACalculator: Elementary Arithmetic Calculator
-## Technology
+## Techniques
 * Lexer
 * Parser(Precedence climbing or The classic solution)
 ## Compile

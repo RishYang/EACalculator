@@ -1,6 +1,12 @@
 # EACalculator: Elementary Arithmetic Calculator
-## Complie
+## Technology
+* Lexer
+* Parser(Precedence climbing or The classic solution)
+## Compile
 `g++ -pipe std=c++11 -Wall -Wextra -DPC -I. -o test.exe lexer.cpp parser.cpp patser_test.cpp`
+
+    Compile with `-DPC` to make Parser run by precedence climbing
+    Compile without `-DPC` to make Parser run by the classic solution
 ## Usage
 `test.exe [formula]`
 ### Example

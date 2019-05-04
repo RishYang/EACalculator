@@ -128,7 +128,7 @@ AST* AST::P(list<Token>& input)
     AST *t;
     if (input.front() == tk_Integer)
     {
-        t = mkLeaf(input.front());
+        t = mkLeaf(new Token(input.front()));
         input.pop_front();
         return t;
     }
@@ -143,7 +143,7 @@ AST* AST::P(list<Token>& input)
     else if(input.front() == tk_Sub)
     {
         Token *tk = new Token(&input.front());
-        tk.tok_t = tk_Negate;
+        tk->tok_t = tk_Negate;
         input.pop_front();
         t = F(input);
         return mkNode(tk, t);
@@ -213,5 +213,5 @@ double AST::eval(AST* tree)
             
     }
         
-};
+}
     

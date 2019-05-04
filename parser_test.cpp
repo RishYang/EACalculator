@@ -14,18 +14,21 @@ int main(int argv, char* argc[])
     //getline(cin, str);
     list<Token> tokens={};
     Lexer::run_lexer(str, tokens);
+    #ifdef TEST
     for(auto &a : tokens)
     {
         cout<<a.tok_name()<< " : "<<a.de.num<<" : "<<a.err_col<<endl;
     }
-    
+    #endif
     AST* tree = AST::Eparser(tokens);
     if(tree == nullptr)
         cout<<"AST dose not exist"<<endl;
     else
-    {
+    {   
+        #ifdef TEST
         AST::prt_ast(tree);
-        cout<<"= "<<AST::eval(tree);
+        #endif
+        cout<<"= "<<AST::eval(tree)<<endl;
     }
         
     delete tree;

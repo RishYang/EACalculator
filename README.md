@@ -5,8 +5,9 @@
 ## Compile
 `g++ -pipe std=c++11 -Wall -Wextra -DPC -I. -o test.exe lexer.cpp parser.cpp patser_test.cpp`
 
-    Compile with `-DPC` to make Parser run by precedence climbing
-    Compile without `-DPC` to make Parser run by the classic solution
+   with `-DPC` make Parser run by precedence climbing
+   without `-DPC` make Parser run by the classic solution
+   with -DTEST for printing output of lexer and parser 
 ## Usage
 `test.exe [formula]`
 ### Example
